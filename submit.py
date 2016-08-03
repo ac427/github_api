@@ -48,7 +48,7 @@ def submit():
 # Repository.py:    def create_issue(self, title, body=github.GithubObject.NotSet, assignee=github.GithubObject.NotSet, milestone=github.GithubObject.NotSet, labels=github.GithubObject.NotSet):
 
     title=username
-    body="PI is "+pi+ newline + "Project is " + newline + "SSH public key is " +ssh_public_key
+    body="PI is: "+pi+ newline + "Project is: " +project + newline + "SSH public key is: " +ssh_public_key
 
     response = repo.create_issue(title,body)
 
