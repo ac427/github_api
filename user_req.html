@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;    
+}
+</style>
+</head>
+<body>
+
+<h2>User account request form:</h2>
+<form method="POST" action="/user_request">
+
+<table style="width:100%">
+  <tr>
+    <th>Select user name </th>
+    <td> <input select name="username" type="text" required/> </td>
+  </tr>
+  <tr>
+    <td>PI</td>
+
+    <td>  <input name="pi" type="text" required/> </td>
+  </tr>
+
+ <tr>
+    <td>Project/Department</td>
+
+    <td>  <input name="project" type="text" required/> </td>
+  </tr>
+
+ <tr>
+    <td>Your ssh public key</td>
+
+    <td>  <textarea name="ssh_public_key" cols="40" rows="5" required></textarea></td>
+  </tr>
+
+</table>
+<br>
+<p align="center">
+<input name="submit" type="submit" value="Submit" />
+</p>
+
+</body>
+</html>
+

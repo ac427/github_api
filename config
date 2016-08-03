@@ -1,0 +1,3 @@
+[config]
+token=mygithubtoken_DONT_upload_to_github_in_prod
+githubuser=ac427
