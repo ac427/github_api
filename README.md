@@ -1,3 +1,3 @@
-# simple bottle application which will create git issue on form submit. 
+# simple bottle application which will create github issue on form submit. 
 
 
