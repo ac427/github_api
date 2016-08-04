@@ -1,5 +1,5 @@
 [config]
-GITHUB_TOKEN=mygithubtoken_DONT_upload_to_github_in_prod
+GITHUB_TOKEN=1234
 GITHUB_USERNAME=ac427
 USERNAME=myusername
 PASSWORD=mypassword

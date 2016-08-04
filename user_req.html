@@ -11,11 +11,29 @@ th, td {
     text-align: left;    
 }
 </style>
+
+<script>
+function validate()
+{
+
+var flag;
+var alphaExp=/^[a-zA-Z][a-zA-Z0-9_.-]*$/;
+if(!(user_account.username.value.match(alphaExp)))
+{
+ alert("Username must begin with letter and can have only letters,numbers and - . _");
+ user_account.user.focus();
+ return false;
+}
+
+}
+
+</script>
+
 </head>
 <body>
 
 <h2>User account request form:</h2>
-<form method="POST" action="/user_request">
+<form name="user_account" method="POST" action="/user_request">
 
 <table style="width:100%">
   <tr>
@@ -25,7 +43,7 @@ th, td {
   <tr>
     <td>PI</td>
 
-    <td>  <input name="pi" type="text" required/> </td>
+    <td>  <input name="pi" onfocus="validate()" type="text" required/> </td>
   </tr>
 
  <tr>
