@@ -1,2 +1,3 @@
-# my_python_bottle_app
-app to submit git issue
+# simple bottle application which will create git issue on form submit. 
+
+
