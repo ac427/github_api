@@ -9,21 +9,20 @@ import ConfigParser
 # Secret, don't share the file config. 
 Config = ConfigParser.ConfigParser()
 Config.read("config")
-token=Config.get ("config", "token")
-githubuser=Config.get ("config", "githubuser")
-
+GITHUB_TOKEN=Config.get ("config", "GITHUB_TOKEN")
+GITHUB_USERNAME=Config.get ("config", "GITHUB_USERNAME")
+USERNAME=Config.get ("config", "USERNAME")
+PASSWORD=Config.get ("config", "PASSWORD")
+GITHUB_REPO=Config.get ("config", "GITHUB_REPO")
 
 # references/credits
 #https://realpython.com/blog/python/developing-with-bottle-part-2-plot-ly-api/ 
 #https://github.com/PyGithub/PyGithub/issues/132
 #https://wiki.python.org/moin/ConfigParserExamples
 
-#USERNAME="myusername"
-#PASSWORD="mypassword"
-
-
 
 newline="\n"
+two_newline="\n \n"
 tab="\t"
 
 @get('/user_request')
@@ -41,14 +40,14 @@ def submit():
 #    g = Github("myusername", "mypassword")
 
 #token auth; create token on github.com
-    g = Github(token)
-    repo = g.get_user(githubuser).get_repo("my_saltstack")  
+    g = Github(GITHUB_TOKEN)
+    repo = g.get_user(GITHUB_USERNAME).get_repo(GITHUB_REPO)  
 
 #from API
 # Repository.py:    def create_issue(self, title, body=github.GithubObject.NotSet, assignee=github.GithubObject.NotSet, milestone=github.GithubObject.NotSet, labels=github.GithubObject.NotSet):
 
     title=username
-    body="PI is: "+pi+ newline + "Project is: " +project + newline + "SSH public key is: " +ssh_public_key
+    body="PI is: "+pi+ two_newline + "Project is: " +project + two_newline + "SSH public key is: \n" +ssh_public_key
 
     response = repo.create_issue(title,body)
 
