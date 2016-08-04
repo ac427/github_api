@@ -1,3 +1,6 @@
 [config]
-token=mygithubtoken_DONT_upload_to_github_in_prod
-githubuser=ac427
+GITHUB_TOKEN=mygithubtoken_DONT_upload_to_github_in_prod
+GITHUB_USERNAME=ac427
+USERNAME=myusername
+PASSWORD=mypassword
+GITHUB_REPO=my_saltstack
