@@ -1,3 +1,3 @@
-# simple bottle application which will create github issue using web 
+# simple bottle application which will create github issue using webpage
 
 
