@@ -18,7 +18,7 @@ for repo in repos:
   #https://developer.github.com/v3/teams/members/#list-team-members
     print "Maintainer Teams Members" 
     for member in teams.get_members('maintainer'):
-        print member
+        print teams.name + "  " + member.name
   print "Collaborators and their permissions"
   for user in repo.get_collaborators():
     print user.login + "--> " +repo.get_collaborator_permission(user)
